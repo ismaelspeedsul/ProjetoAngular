@@ -1,33 +1,32 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { AlunosRoutingModule } from './alunos/alunos.routing.module';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app.routing.module';
+import { AlunosModule } from './alunos/alunos.module';
+
 import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { CursoComponent } from './curso/curso.component';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { routing } from './app.routing';
-import { CursoDetalheComponent } from './curso/curso-detalhe/curso-detalhe.component';
-import { CursoService } from './curso/curso.service';
-import { CursoNaoEncontradoComponent } from './curso-nao-encontrado/curso-nao-encontrado.component';
+import { CursoModule } from './curso/curso.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
-    CursoComponent,
-    CursoDetalheComponent,
-    CursoNaoEncontradoComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    CursoModule,
+    AlunosModule,
+    AppRoutingModule
   ],
-  providers: [CursoService],
+  // providers: [CursoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

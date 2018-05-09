@@ -11,9 +11,10 @@ export class CursoService {
   }
 
   getCursos( id: number ) {
-       let curso = this.getCurso();
-       for (let i=0; i<curso.length; i++) {
-         let cursos = curso[i];
+       const curso = this.getCurso();
+       for (let i = 0; i < curso.length; i++) {
+         const cursos = curso[i];
+         // tslint:disable-next-line:triple-equals
          if (cursos.id == id) {
            return cursos;
          }

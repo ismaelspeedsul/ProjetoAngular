@@ -2,8 +2,6 @@ import { CursoService } from './../curso.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-
-
 @Component({
   selector: 'app-curso-detalhe',
   templateUrl: './curso-detalhe.component.html',
@@ -35,7 +33,8 @@ export class CursoDetalheComponent implements OnInit {
       }
     );
   }
-  ngOnDestroy() {
+     // tslint:disable-next-line:use-life-cycle-interface
+     ngOnDestroy() {
     this.inscricao.unsubscribe();
   }
 }
