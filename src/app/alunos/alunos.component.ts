@@ -6,12 +6,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './alunos.component.html',
   styleUrls: ['./alunos.component.css']
 })
+
 export class AlunosComponent implements OnInit {
+    private alunos: any[] = [];
 
   // tslint:disable-next-line:no-shadowed-variable
   constructor(private AlunosService: AlunosService) { }
 
   ngOnInit() {
+    this.alunos = this.AlunosService.getAlunos();
   }
 
 }
