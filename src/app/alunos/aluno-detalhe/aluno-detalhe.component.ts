@@ -30,7 +30,6 @@ export class AlunoDetalheComponent implements OnInit {
     this.inscricao.unsubscribe();
   }
   editarAluno() {
-    
      this.router.navigate(['/alunos', this.aluno.id, 'editar']);
  }
 

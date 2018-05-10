@@ -4,7 +4,7 @@
                         <p>Lista de Alunos</p>
       <div class="collection">
         <a class="collection-item"
-        *ngFor="let aluno of alunos" [routerLink]="[aluno.id]">{{ aluno.nome }}</a> 
+        *ngFor="let alunos of alunos" [routerLink]="[alunos.id]">{{ alunos.nome }}</a> 
       </div>
   </div>
   
